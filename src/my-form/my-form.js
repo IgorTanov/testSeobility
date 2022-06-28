@@ -11,7 +11,7 @@ import InputText from "../input-text/input-text";
 
 function MyForm(){
     const [data,setDate]=useState({name:"",mail:"",phone:"",msg:"",data:''})
-    console.log(data)
+   
     return(
         <div className="container" >
             <form className="form" >

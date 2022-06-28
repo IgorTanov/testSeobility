@@ -17,14 +17,14 @@ const InputButton = ({ data, setDate }) => {
         const itemPhone = data.phone
         const itemData = data.data
 
-        console.log(itemName.length)
-        console.log(itemName[0].length)
-        console.log(itemName[1].length)
-        console.log(/^\w+$/.test(itemName[0]))
-        console.log(/^\w+$/.test(itemName[1]))
-        console.log((/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(itemMail)))
-        console.log(itemPhone != isNaN)
-        console.log(itemData)
+       // console.log(itemName.length)
+        //console.log(itemName[0].length)
+       // console.log(itemName[1].length)
+       // console.log(/^\w+$/.test(itemName[0]))
+       // console.log(/^\w+$/.test(itemName[1]))
+        //console.log((/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(itemMail)))
+        //console.log(itemPhone != isNaN)
+       // console.log(itemData)
 
         //---------------------------------------------------------------поверка поля name
         if (itemName.length == 2 &&
@@ -57,8 +57,6 @@ const InputButton = ({ data, setDate }) => {
             }
             ).then((result) => {
                 return (result.json())
-
-
             }).then((json) => {
                 if (json.status) {
                     setError(json.status)
@@ -67,18 +65,13 @@ const InputButton = ({ data, setDate }) => {
                 else {
                     setError('что-то пошло не так')
                     setDate({ name: "", mail: "", phone: "", msg: "", data: '' })
-
                 }
-
             }
             )
                 .catch((err) => {
                     setError('что-то пошло не так')
-
-
                 })
         }
-
         else {
             alert("форма заполнена не корректно!!!")
         }
